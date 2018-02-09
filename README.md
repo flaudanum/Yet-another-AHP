@@ -1,2 +1,2 @@
-# Yet-another-AHP
-Analyitcal Hierarchy Process for decision making.
+# Yet Another AHP
+This application is about *Analyitcal Hierarchy Process* for decision making.

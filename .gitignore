@@ -6,6 +6,13 @@ __pycache__/
 # C extensions
 *.so
 
+# Common IDEs
+*.swp
+.idea/
+.buildpath
+.project
+.settings
+
 # Distribution / packaging
 .Python
 env/
@@ -62,7 +69,7 @@ instance/
 .scrapy
 
 # Sphinx documentation
-docs/_build/
+doc/_*
 
 # PyBuilder
 target/
