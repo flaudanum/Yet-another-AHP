@@ -30,8 +30,19 @@ class Criterion(Element):
     def children(self):
         """
         :return: :obj:`tuple` with references to child criteria
+        :rtype: tuple(Criterion)
         """
         return tuple(self._children)
+
+    @property
+    def priority(self):
+        return self._priority
+
+    @priority.setter
+    def priority(self, new_val):
+        assert new_val >= 0.
+        assert new_val <= 1.
+        self._priority = new_val
 
     def __init__(self, description, parent=None):
         super(Criterion, self).__init__(description)
@@ -40,6 +51,7 @@ class Criterion(Element):
         assert isinstance(parent, Criterion) or (parent is None)
         self._parent = parent
         self._children = list()
+        self._priority = None
 
         # Add self as new child to parent
         if self._parent is not None:

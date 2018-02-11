@@ -5,8 +5,6 @@ Definition of class Judgement
 
 import numpy as np
 
-from yeahp.element import Element
-
 
 class Judgement:
 
