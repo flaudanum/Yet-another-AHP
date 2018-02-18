@@ -24,6 +24,8 @@ def test_create():
     for child in criterion_obj.children:
         assert child.is_covering()
 
+# TODO: check that the description are blank-stripped
+
 
 if __name__ == "__main__":
     pytest.main()

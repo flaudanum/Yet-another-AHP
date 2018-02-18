@@ -53,6 +53,7 @@ def test_create(ahp_obj):
 
     assert [alt.description for alt in ahp_obj.alternatives] == ["alternative #1", "alternative #2", "alternative #3"]
 
+
 # TODO: Check that criteria have distinct names
 
 
@@ -78,8 +79,8 @@ def test_compare_criteria(ahp_obj):
     ref_matrix = np.array(
         [
             [1, 3, 7],
-            [1/3, 1, 3],
-            [1/7, 1/3, 1]
+            [1 / 3, 1, 3],
+            [1 / 7, 1 / 3, 1]
         ]
     )
     eig_val, eig_vect = np.linalg.eig(ref_matrix)
@@ -110,7 +111,7 @@ def test_hierarchical_comparison(ahp_obj):
             ["Criterion #2", "Criterion #3", 3]
         ],
         "Criterion #2": [
-            ["Sub-criterion #21", "Sub-criterion #22", 1/3],
+            ["Sub-criterion #21", "Sub-criterion #22", 1 / 3],
             ["Sub-criterion #21", "Sub-criterion #23", 1],
             ["Sub-criterion #22", "Sub-criterion #23", 3]
         ]
@@ -129,8 +130,8 @@ def test_hierarchical_comparison(ahp_obj):
     ref_matrix = np.array(
         [
             [1, 3, 7],
-            [1/3, 1, 3],
-            [1/7, 1/3, 1]
+            [1 / 3, 1, 3],
+            [1 / 7, 1 / 3, 1]
         ]
     )
     eig_val, eig_vect = np.linalg.eig(ref_matrix)
@@ -144,9 +145,9 @@ def test_hierarchical_comparison(ahp_obj):
     # Comparisons against 'Criterion #2'
     ref_matrix = np.array(
         [
-            [1, 1/3, 1],
+            [1, 1 / 3, 1],
             [3, 1, 3],
-            [1, 1/3, 1]
+            [1, 1 / 3, 1]
         ]
     )
     eig_val, eig_vect = np.linalg.eig(ref_matrix)
@@ -157,6 +158,10 @@ def test_hierarchical_comparison(ahp_obj):
     npt.assert_array_almost_equal_nulp(ref_priorities[0], crit21.priority)
     npt.assert_array_almost_equal_nulp(ref_priorities[1], crit22.priority)
     npt.assert_array_almost_equal_nulp(ref_priorities[2], crit23.priority)
+
+    # Priorities of all covering criteria must sum to one
+    priorities = np.array([crit.priority for crit in ahp_obj.criteria_table if crit.is_covering()], dtype="float64")
+    npt.assert_array_almost_equal_nulp(1., priorities.sum(), nulp=1)
 
 
 def test_hierarchical_comparison_failure1(ahp_obj):
@@ -171,7 +176,7 @@ def test_hierarchical_comparison_failure1(ahp_obj):
             ["Criterion #2", "Criterion #3", 3]
         ],
         "Criterion #1": [
-            ["Sub-criterion #21", "Sub-criterion #22", 1/3],
+            ["Sub-criterion #21", "Sub-criterion #22", 1 / 3],
             ["Sub-criterion #21", "Sub-criterion #23", 1],
             ["Sub-criterion #22", "Sub-criterion #23", 3]
         ]
@@ -202,6 +207,82 @@ def test_hierarchical_comparison_failure2(ahp_obj):
 
     with pytest.raises(AssertionError) as excinfo:
         ahp_obj.hierarchical_compare(comparisons=comparisons)
+
+
+def test_alternatives_comparison(ahp_obj):
+    """
+    **Success testing**
+       Comparison of alternatives against covering criteria
+
+    :param ahp_obj:
+    :type ahp_obj: Ahp
+    """
+
+    crit_priorities = {
+        'Criterion #1': 0.66941686944898771,
+        'Criterion #3': 0.087946208819056057,
+        'Sub-criterion #22': 0.14558215303917371,
+        'Sub-criterion #21': 0.048527384346391249,
+        'Sub-criterion #23': 0.048527384346391249
+    }
+
+    for descr in crit_priorities:
+        ahp_obj.criteria_hash[descr].priority = crit_priorities[descr]
+
+    comparisons = {
+        'Criterion #1': [
+            ['alternative #1', 'alternative #2', 3],
+            ['alternative #1', 'alternative #3', 1 / 2],
+            ['alternative #2', 'alternative #3', 1 / 9],
+        ],
+        'Sub-criterion #21': [
+            ['alternative #1', 'alternative #2', 3],
+            ['alternative #1', 'alternative #3', 1],
+            ['alternative #2', 'alternative #3', 1 / 3],
+        ],
+        'Sub-criterion #22': [
+            ['alternative #1', 'alternative #2', 1 / 2],
+            ['alternative #1', 'alternative #3', 1 / 2],
+            ['alternative #2', 'alternative #3', 1],
+        ],
+        'Sub-criterion #23': [
+            ['alternative #1', 'alternative #2', 1 / 9],
+            ['alternative #1', 'alternative #3', 1 / 9],
+            ['alternative #2', 'alternative #3', 1],
+        ],
+        'Criterion #3': [
+            ['alternative #1', 'alternative #2', 1],
+            ['alternative #1', 'alternative #3', 3],
+            ['alternative #2', 'alternative #3', 3],
+        ],
+    }
+
+    ahp_obj.alternatives_compare(comparisons=comparisons)
+
+    np.testing.assert_array_almost_equal_nulp(np.array(list(ahp_obj.goal_properties.values())).sum(), 1.)
+
+
+def test_alternatives_comparison_failure(ahp_obj):
+    """
+    **Failure testing**
+       Fails if the argument *comparison* does not refer to a proper criterion description
+
+    :param ahp_obj:
+    :type ahp_obj: Ahp
+    """
+
+    comparisons = {
+        'Criterion @$': None,
+        'Sub-criterion #21': None,
+        'Sub-criterion #22': None,
+        'WRONG CRITERION DESCRIPTION': None,
+        'Criterion #3': None
+    }
+
+    with pytest.raises(NameError) as excinfo:
+        ahp_obj.alternatives_compare(comparisons=comparisons)
+    assert 'The description(s): \'Criterion @$\', \'WRONG CRITERION DESCRIPTION\'\ndo(es)' + \
+           ' not match any criterion in the AHP tree' in str(excinfo.value)
 
 
 if __name__ == "__main__":

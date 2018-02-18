@@ -22,6 +22,12 @@ class Judgement:
             self._compute_priorities()
         return self._priorities
 
+    @property
+    def priorities_dict(self):
+        if self._priorities is None:
+            self._compute_priorities()
+        return dict([(descr, prio) for descr, prio in zip(self._labels, self._priorities)])
+
     def __init__(self, labels):
         self._labels = sorted(labels)
         self._labels_dict_pos = dict([(lab,n) for n,lab in enumerate(self._labels)])

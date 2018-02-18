@@ -42,6 +42,9 @@ wheels/
 pip-log.txt
 pip-delete-this-directory.txt
 
+# Pytest
+.pytest_cache/
+
 # Unit test / coverage reports
 htmlcov/
 .tox/
@@ -64,9 +67,6 @@ local_settings.py
 # Flask stuff:
 instance/
 .webassets-cache
-
-# Scrapy stuff:
-.scrapy
 
 # Sphinx documentation
 docs/_*
@@ -106,3 +106,7 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# Scrapy stuff:
+.scrapy
+
