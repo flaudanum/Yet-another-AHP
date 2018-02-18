@@ -3,8 +3,6 @@
 Definition of class Ahp
 """
 
-import numpy as np
-
 from yeahp.criterion import Criterion
 from yeahp.alternative import Alternative
 from yeahp.judgement import Judgement

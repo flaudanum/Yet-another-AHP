@@ -3,7 +3,6 @@
 Definition of class Alternative
 """
 
-import numpy as np
 from yeahp.element import Element
 
 

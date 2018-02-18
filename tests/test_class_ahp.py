@@ -205,7 +205,7 @@ def test_hierarchical_comparison_failure2(ahp_obj):
         ]
     }
 
-    with pytest.raises(AssertionError) as excinfo:
+    with pytest.raises(AssertionError):
         ahp_obj.hierarchical_compare(comparisons=comparisons)
 
 
