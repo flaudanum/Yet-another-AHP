@@ -97,3 +97,7 @@ class Judgement:
         eig_max_ind = eig_val.argmax()
         priorities = eig_vect[:, eig_max_ind]
         self._priorities = np.real(priorities / priorities.sum())  # Normalization
+
+    # TODO: Compute consistency index
+    # TODO: Compute consistency deviation matrix
+    # TODO: Indicate the most inconsistent comparison

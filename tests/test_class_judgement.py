@@ -54,6 +54,7 @@ def test_create():
 def test_create_failure():
     """
     **Failure testing**
+       A comparison is missing for computing priorities
     """
 
     # Setup of the instance of class Judgement
