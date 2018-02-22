@@ -11,11 +11,8 @@ import numpy.testing as npt
 from yeahp.judgement import Judgement
 
 
-def test_create():
-    """
-    **Success testing**
-    """
-
+@pytest.fixture(scope='module', name='judg_obj')
+def judg_obj_fixture():
     # Setup of the instance of class Judgement
     descriptions = ['element #2', 'element #3', 'element #4', 'element #1']
 
@@ -28,27 +25,75 @@ def test_create():
     judg_obj.compare('element #2', 'element #4', 1/3)
     judg_obj.compare('element #3', 'element #4', 9)
 
-    # Test the description list of the compared elements
-    assert judg_obj.labels == ('element #1', 'element #2', 'element #3', 'element #4')
+    return judg_obj
 
-    # Test the reciprocal comparison matrix
+
+@pytest.fixture(scope='module', name='ref_comp_matrix')
+def ref_matrix_fixture():
     ref_array = [
         [1, 1 / 3, 3, 1 / 5],
         [3, 1, 5, 1 / 3],
         [1 / 3, 1 / 5, 1, 9],
         [5, 3, 1 / 9, 1]
     ]
-    ref_matrix = np.array(ref_array, dtype='float64')
+    return np.array(ref_array, dtype='float64')
 
-    npt.assert_array_almost_equal_nulp(ref_matrix, judg_obj.matrix, nulp=1)
+
+def test_create(judg_obj, ref_comp_matrix):
+    """
+    **Success testing**
+       Instantiation of class Judgement
+    """
+
+    # Test the description list of the compared elements
+    assert judg_obj.labels == ('element #1', 'element #2', 'element #3', 'element #4')
+
+    # Test the reciprocal comparison matrix
+    npt.assert_array_almost_equal_nulp(ref_comp_matrix, judg_obj.matrix, nulp=1)
 
     # Test the computation of priorities
-    eig_val, eig_vect = np.linalg.eig(ref_matrix)
+    eig_val, eig_vect = np.linalg.eig(ref_comp_matrix)
     eig_max_ind = eig_val.argmax()
     priorities = eig_vect[:, eig_max_ind]
     ref_priorities = np.real(priorities / priorities.sum())  # Normalization
 
     npt.assert_array_almost_equal_nulp(ref_priorities, judg_obj.priorities, nulp=1)
+
+
+def test_consistency_index(judg_obj, ref_comp_matrix):
+    """
+    **Success testing**
+       Method returning the value of the consistency index of the judgment
+    """
+
+    eig_val, eig_vect = np.linalg.eig(ref_comp_matrix)
+    n = 4
+    # consistency index
+    ind_max = eig_val.argmax()
+    index = (np.real(eig_val[ind_max]) - n) / (n - 1)
+
+    npt.assert_array_almost_equal_nulp(judg_obj.index(), index)
+
+
+def test_consistency_deviation(ref_comp_matrix, judg_obj):
+    """
+    **Success testing**
+
+    'w' is the vector of priorities and 'A' is the reciprocal comparison matrix
+    D = diag(w_i)
+    The error matrix 'E' is:
+    E = D^{-1} A D
+    with \epsilon_{ij} = a_{ij} w_i/w_j
+    """
+    eig_val, eig_vect = np.linalg.eig(ref_comp_matrix)
+    # consistency index
+    ind_max = eig_val.argmax()
+    # priority vector
+    w = eig_vect[:, ind_max]
+    w = np.real(w / w.sum())
+    D = np.diag(w)
+    E = np.dot(np.linalg.solve(D, ref_comp_matrix), D)
+    npt.assert_array_almost_equal_nulp(E-1, judg_obj.deviation_matrix())
 
 
 def test_create_failure():

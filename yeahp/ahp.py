@@ -157,7 +157,7 @@ class Ahp:
         if desc_diff:
             unmatched = ['\'{}\''.format(s) for s in list(desc_diff)]
             message = 'The description(s): {}\ndo(es) not match any criterion in the AHP tree'.\
-                format(", ".join(unmatched))
+                format(", ".join(sorted(unmatched)))
             raise NameError(message)
 
         # Iter over the description of criteria in argument 'comparisons'

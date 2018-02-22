@@ -98,6 +98,42 @@ class Judgement:
         priorities = eig_vect[:, eig_max_ind]
         self._priorities = np.real(priorities / priorities.sum())  # Normalization
 
-    # TODO: Compute consistency index
-    # TODO: Compute consistency deviation matrix
-    # TODO: Indicate the most inconsistent comparison
+    def index(self):
+        """
+        Consistency index
+        :rtype: float
+        """
+        if not (self._comparisonMatrix > 0).all():
+            message = 'Some comparisons are missing'
+            raise ValueError(message)
+
+        eig_val, eig_vect = np.linalg.eig(self._comparisonMatrix)
+        n = self._comparisonMatrix.shape[0]
+        # consistency index
+        ind_max = eig_val.argmax()
+        return (np.real(eig_val[ind_max]) - n) / (n - 1)
+
+    def deviation_matrix(self):
+        """
+        'w' is the vector of priorities and 'A' is the reciprocal comparison matrix
+        D = diag(w_i)
+        The error matrix 'E' is:
+        E = D^{-1} A D
+        with \epsilon_{ij} = a_{ij} w_i / w_j
+        The deviation matrix is E - 1
+        """
+        if not (self._comparisonMatrix > 0).all():
+            message = 'Some comparisons are missing'
+            raise ValueError(message)
+
+        mat_A = self._comparisonMatrix
+        eig_val, eig_vect = np.linalg.eig(mat_A)
+        n = mat_A.shape[0]
+        # consistency index
+        ind_max = eig_val.argmax()
+        # priority vector
+        w = eig_vect[:, ind_max]
+        w = np.real(w / w.sum())
+        D = np.diag(w)
+        E = np.dot(np.linalg.solve(D, mat_A), D)
+        return E - 1.
