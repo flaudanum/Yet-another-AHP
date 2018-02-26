@@ -3,6 +3,8 @@
 Definition of class Ahp
 """
 
+import sys
+
 from yeahp.criterion import Criterion
 from yeahp.alternative import Alternative
 from yeahp.judgement import Judgement
@@ -60,6 +62,13 @@ class Ahp:
 
         for comp in comparisons:
             judg.compare(comp[0], comp[1], comp[2])
+
+        # Consistency checking
+        status = judg.status()
+        if status:
+            sys.stderr.write("Comparison against criterion \"{}\":\n".format(parent.description))
+            sys.stderr.write(str(judg)+"\n")
+            sys.stderr.write("Comparison between elements '{}' could be revised".format(", ".join(status)))
 
         priorities = judg.priorities_dict
 
@@ -172,6 +181,13 @@ class Ahp:
             judg = Judgement(labels=descriptions)
             for comp in comparisons[cov_crit_descr]:
                 judg.compare(comp[0], comp[1], comp[2])
+
+            # Consistency checking
+            status = judg.status()
+            if status:
+                sys.stderr.write("Comparison against \"{}\":\n".format(cov_crit_descr))
+                sys.stderr.write(str(judg) + "\n")
+                sys.stderr.write("Comparison between elements '{}' could be revised".format(", ".join(status)))
 
             # Update the priority values of alternatives against each covering criterion
             for descr in judg.priorities_dict:

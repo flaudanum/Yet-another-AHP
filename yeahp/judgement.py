@@ -8,6 +8,8 @@ import numpy as np
 
 class Judgement:
 
+    _inconsistency_threshold = 0.1  # 10% (random index assessment cf. Saaty)
+
     @property
     def labels(self):
         """
@@ -55,6 +57,12 @@ class Judgement:
         self._comparisonMatrix = np.eye(self._size, self._size)
         # Priority values (initially no values)
         self._priorities = None
+
+    def __repr__(self):
+        return "Judgement([{}])".format(", ".join(self._labels))
+
+    def __str__(self):
+        return "Judgement([{}])".format(", ".join(self._labels))
 
     def compare(self, elt1, elt2, score):
         """
@@ -137,3 +145,19 @@ class Judgement:
         D = np.diag(w)
         E = np.dot(np.linalg.solve(D, mat_A), D)
         return E - 1.
+
+    def status(self):
+        """
+        Status on the consistency of the judgment
+        :rtype: tuple
+        """
+        if not (self._comparisonMatrix > 0).all():
+            message = 'Some comparisons are missing, impossible to report a status'
+            raise ValueError(message)
+
+        if self.index() < Judgement._inconsistency_threshold:
+            return tuple()
+
+        abs_devmat = np.absolute(self.deviation_matrix())
+        ind0, ind1 = np.unravel_index(abs_devmat.argmax(), abs_devmat.shape)
+        return self._labels[ind0], self._labels[ind1]
