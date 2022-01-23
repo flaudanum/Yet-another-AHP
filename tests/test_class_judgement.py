@@ -76,7 +76,7 @@ def test_consistency_index(judg_obj, ref_comp_matrix):
 
 
 def test_consistency_deviation(ref_comp_matrix, judg_obj):
-    """
+    r"""
     **Success testing**
 
     'w' is the vector of priorities and 'A' is the reciprocal comparison matrix

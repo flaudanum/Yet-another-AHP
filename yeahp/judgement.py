@@ -122,7 +122,7 @@ class Judgement:
         return (np.real(eig_val[ind_max]) - n) / (n - 1)
 
     def deviation_matrix(self):
-        """
+        r"""
         'w' is the vector of priorities and 'A' is the reciprocal comparison matrix
         D = diag(w_i)
         The error matrix 'E' is:
