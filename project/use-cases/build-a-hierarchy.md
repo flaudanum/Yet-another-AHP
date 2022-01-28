@@ -2,6 +2,10 @@
 
 I access the application as _standard user_.
 
+There is a sidebar to the left of the screen. The hierarchy is displayed in the right part.
+
+⚙️ A goal element is automatically added with a placeholder indicating "*Goal's title*".
+
 👤 I specify the goal of the process
 
 - I give the goal's name
