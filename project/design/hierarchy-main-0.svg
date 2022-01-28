@@ -1,0 +1,1218 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="1920"
+   height="1080"
+   viewBox="0 0 507.99999 285.75001"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.1.1 (3bf5ae0d25, 2021-09-20)"
+   sodipodi:docname="hierarchy-main-0.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#f2f2f2"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="1"
+     inkscape:pagecheckerboard="false"
+     inkscape:document-units="mm"
+     showgrid="true"
+     units="px"
+     width="1920px"
+     inkscape:snap-bbox="true"
+     inkscape:bbox-nodes="true"
+     inkscape:zoom="0.73703704"
+     inkscape:cx="753.69347"
+     inkscape:cy="63.768844"
+     inkscape:window-width="1920"
+     inkscape:window-height="1011"
+     inkscape:window-x="0"
+     inkscape:window-y="32"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1"
+     inkscape:snap-bbox-edge-midpoints="false"
+     inkscape:snap-bbox-midpoints="false"
+     inkscape:snap-grids="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid9"
+       spacingx="1.3229167"
+       spacingy="1.3229167" />
+  </sodipodi:namedview>
+  <defs
+     id="defs2">
+    <marker
+       style="overflow:visible;"
+       id="Arrow2Lend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(1.1) rotate(180) translate(1,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path62398" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow1Mend"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow1Mend"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.4) rotate(180) translate(10,0)"
+         style="fill-rule:evenodd;fill:context-stroke;stroke:context-stroke;stroke-width:1.0pt;"
+         d="M 0.0,0.0 L 5.0,-5.0 L -12.5,0.0 L 5.0,5.0 L 0.0,0.0 z "
+         id="path62386" />
+    </marker>
+    <marker
+       style="overflow:visible;"
+       id="Arrow2Send"
+       refX="0.0"
+       refY="0.0"
+       orient="auto"
+       inkscape:stockid="Arrow2Send"
+       inkscape:isstock="true">
+      <path
+         transform="scale(0.3) rotate(180) translate(-2.3,0)"
+         d="M 8.7185878,4.0337352 L -2.2072895,0.016013256 L 8.7185884,-4.0017078 C 6.9730900,-1.6296469 6.9831476,1.6157441 8.7185878,4.0337352 z "
+         style="stroke:context-stroke;fill-rule:evenodd;fill:context-stroke;stroke-width:0.62500000;stroke-linejoin:round;"
+         id="path62410" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Lend-8"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:0.625;stroke-linejoin:round"
+         id="path62398-9" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Lend-3"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:0.625;stroke-linejoin:round"
+         id="path62398-6" />
+    </marker>
+    <marker
+       style="overflow:visible"
+       id="Arrow2Lend-2"
+       refX="0"
+       refY="0"
+       orient="auto"
+       inkscape:stockid="Arrow2Lend"
+       inkscape:isstock="true">
+      <path
+         transform="matrix(-1.1,0,0,-1.1,-1.1,0)"
+         d="M 8.7185878,4.0337352 -2.2072895,0.01601326 8.7185884,-4.0017078 c -1.7454984,2.3720609 -1.7354408,5.6174519 -6e-7,8.035443 z"
+         style="fill:context-stroke;fill-rule:evenodd;stroke:context-stroke;stroke-width:0.625;stroke-linejoin:round"
+         id="path62398-93" />
+    </marker>
+  </defs>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#ffffff;stroke:none;stroke-width:0.529167;stroke-miterlimit:4;stroke-dasharray:none"
+       id="rect37530"
+       width="66.145836"
+       height="285.75"
+       x="-8.7646481e-07"
+       y="0" />
+    <path
+       style="fill:none;stroke:#808080;stroke-width:0.52916667;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;stroke-miterlimit:4;stroke-dasharray:none"
+       d="M 66.145835,0 V 285.75"
+       id="path221" />
+    <path
+       d="M 139.27503,152.74154 202.76824,81.309184"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="stroke"
+       id="path63410"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <path
+       d="m 201.40232,84.854164 1.66634,-3.877447 -3.66114,2.10696"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="all"
+       id="path63412"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <rect
+       x="99.21875"
+       y="146.73312"
+       width="40.056274"
+       height="12.016883"
+       rx="1.8025324"
+       ry="1.8025324"
+       fill="#ffffff"
+       stroke="#000000"
+       pointer-events="all"
+       id="rect63414"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <g
+       transform="matrix(0.40056276,0,0,0.40056276,99.018477,42.386501)"
+       id="g63420"
+       style="fill:#333333;fill-opacity:1">
+      <switch
+         id="switch63418"
+         style="fill:#333333;fill-opacity:1">
+        <foreignObject
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+           style="overflow: visible; text-align: left;">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 98px; height: 1px; padding-top: 275px; margin-left: 1px;">
+            <xhtml:div
+               data-drawio-colors="color: rgb(0, 0, 0); "
+               style="box-sizing: border-box; font-size: 0px; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                <xhtml:font
+                   style="font-size: 16px">
+                  <xhtml:b>Goal</xhtml:b>
+                </xhtml:font>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="50"
+           y="279"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text63416"
+           style="font-size:14.0913px;fill:#333333;fill-opacity:1"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:14.0913px;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold';fill:#333333;fill-opacity:1"
+             id="tspan80858">The Goal</tspan></text>
+      </switch>
+    </g>
+    <rect
+       x="203.36507"
+       y="74.631805"
+       width="48.067532"
+       height="12.016883"
+       rx="1.8025324"
+       ry="1.8025324"
+       fill="#ffffff"
+       stroke="#000000"
+       pointer-events="all"
+       id="rect63422"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <g
+       transform="matrix(0.40056276,0,0,0.40056276,99.018477,42.386501)"
+       id="g63428"
+       style="fill:#333333;fill-opacity:1">
+      <switch
+         id="switch63426"
+         style="fill:#333333;fill-opacity:1">
+        <foreignObject
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+           style="overflow: visible; text-align: left;">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 95px; margin-left: 261px;">
+            <xhtml:div
+               data-drawio-colors="color: rgb(0, 0, 0); "
+               style="box-sizing: border-box; font-size: 0px; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                <xhtml:font
+                   style="font-size: 16px">
+                  <xhtml:b>Criterion A</xhtml:b>
+                </xhtml:font>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="320"
+           y="99"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text63424"
+           style="fill:#333333;fill-opacity:1">Criterion A</text>
+      </switch>
+    </g>
+    <rect
+       x="203.36507"
+       y="146.73312"
+       width="48.067532"
+       height="12.016883"
+       rx="1.8025324"
+       ry="1.8025324"
+       fill="#ffffff"
+       stroke="#000000"
+       pointer-events="all"
+       id="rect63430"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <g
+       transform="matrix(0.40056276,0,0,0.40056276,99.018477,42.386501)"
+       id="g63436"
+       style="fill:#333333;fill-opacity:1">
+      <switch
+         id="switch63434"
+         style="fill:#333333;fill-opacity:1">
+        <foreignObject
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+           style="overflow: visible; text-align: left;">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 275px; margin-left: 261px;">
+            <xhtml:div
+               data-drawio-colors="color: rgb(0, 0, 0); "
+               style="box-sizing: border-box; font-size: 0px; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                <xhtml:font
+                   style="font-size: 16px">
+                  <xhtml:b>Criterion B</xhtml:b>
+                </xhtml:font>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="320"
+           y="279"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text63432"
+           style="fill:#333333;fill-opacity:1">Criterion B</text>
+      </switch>
+    </g>
+    <rect
+       x="315.52264"
+       y="126.70498"
+       width="48.067532"
+       height="12.016883"
+       rx="1.8025324"
+       ry="1.8025324"
+       fill="#ffffff"
+       stroke="#000000"
+       pointer-events="all"
+       id="rect63438"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <g
+       transform="matrix(0.40056276,0,0,0.40056276,99.018477,42.386501)"
+       id="g63444"
+       style="fill:#333333;fill-opacity:1">
+      <switch
+         id="switch63442"
+         style="fill:#333333;fill-opacity:1">
+        <foreignObject
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+           style="overflow: visible; text-align: left;">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 225px; margin-left: 541px;">
+            <xhtml:div
+               data-drawio-colors="color: rgb(0, 0, 0); "
+               style="box-sizing: border-box; font-size: 0px; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                <xhtml:font
+                   style="font-size: 16px">
+                  <xhtml:b>Criterion B1</xhtml:b>
+                </xhtml:font>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="600"
+           y="229"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text63440"
+           style="fill:#333333;fill-opacity:1">Criterion B1</text>
+      </switch>
+    </g>
+    <rect
+       x="315.52264"
+       y="166.76126"
+       width="48.067532"
+       height="12.016883"
+       rx="1.8025324"
+       ry="1.8025324"
+       fill="#ffffff"
+       stroke="#000000"
+       pointer-events="all"
+       id="rect63446"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <g
+       transform="matrix(0.40056276,0,0,0.40056276,99.018477,42.386501)"
+       id="g63452"
+       style="fill:#333333;fill-opacity:1">
+      <switch
+         id="switch63450"
+         style="fill:#333333;fill-opacity:1">
+        <foreignObject
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+           style="overflow: visible; text-align: left;">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 325px; margin-left: 541px;">
+            <xhtml:div
+               data-drawio-colors="color: rgb(0, 0, 0); "
+               style="box-sizing: border-box; font-size: 0px; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                <xhtml:font
+                   style="font-size: 16px">
+                  <xhtml:b>Criterion B2</xhtml:b>
+                </xhtml:font>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="600"
+           y="329"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text63448"
+           style="fill:#333333;fill-opacity:1">Criterion B2</text>
+      </switch>
+    </g>
+    <rect
+       x="315.52264"
+       y="102.67121"
+       width="48.067532"
+       height="12.016883"
+       rx="1.8025324"
+       ry="1.8025324"
+       fill="#ffffff"
+       stroke="#000000"
+       pointer-events="all"
+       id="rect63454"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <g
+       transform="matrix(0.40056276,0,0,0.40056276,99.018477,42.386501)"
+       id="g63460"
+       style="fill:#333333;fill-opacity:1">
+      <switch
+         id="switch63458"
+         style="fill:#333333;fill-opacity:1">
+        <foreignObject
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+           style="overflow: visible; text-align: left;">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 165px; margin-left: 541px;">
+            <xhtml:div
+               data-drawio-colors="color: rgb(0, 0, 0); "
+               style="box-sizing: border-box; font-size: 0px; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                <xhtml:font
+                   style="font-size: 16px">
+                  <xhtml:b>Criterion A4</xhtml:b>
+                </xhtml:font>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="600"
+           y="169"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text63456"
+           style="fill:#333333;fill-opacity:1">Criterion A4</text>
+      </switch>
+    </g>
+    <rect
+       x="315.52264"
+       y="82.643059"
+       width="48.067532"
+       height="12.016883"
+       rx="1.8025324"
+       ry="1.8025324"
+       fill="#ffffff"
+       stroke="#000000"
+       pointer-events="all"
+       id="rect63462"
+       style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.400563;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1" />
+    <g
+       transform="matrix(0.40056276,0,0,0.40056276,99.018477,42.386501)"
+       id="g63468"
+       style="fill:#333333;fill-opacity:1">
+      <switch
+         id="switch63466"
+         style="fill:#333333;fill-opacity:1">
+        <foreignObject
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+           style="overflow: visible; text-align: left;">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 115px; margin-left: 541px;">
+            <xhtml:div
+               data-drawio-colors="color: rgb(0, 0, 0); "
+               style="box-sizing: border-box; font-size: 0px; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                <xhtml:font
+                   style="font-size: 16px">
+                  <xhtml:b>Criterion A3</xhtml:b>
+                </xhtml:font>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="600"
+           y="119"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text63464"
+           style="fill:#333333;fill-opacity:1">Criterion A3</text>
+      </switch>
+    </g>
+    <rect
+       x="315.52264"
+       y="62.614918"
+       width="48.067532"
+       height="12.016883"
+       rx="1.8025324"
+       ry="1.8025324"
+       fill="#ffffff"
+       stroke="#000000"
+       pointer-events="all"
+       id="rect63470"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <g
+       transform="matrix(0.40056276,0,0,0.40056276,99.018477,42.386501)"
+       id="g63476"
+       style="fill:#333333;fill-opacity:1">
+      <switch
+         id="switch63474"
+         style="fill:#333333;fill-opacity:1">
+        <foreignObject
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+           style="overflow: visible; text-align: left;">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 65px; margin-left: 541px;">
+            <xhtml:div
+               data-drawio-colors="color: rgb(0, 0, 0); "
+               style="box-sizing: border-box; font-size: 0px; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                <xhtml:font
+                   style="font-size: 16px">
+                  <xhtml:b>Criterion A2</xhtml:b>
+                </xhtml:font>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="600"
+           y="69"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text63472"
+           style="fill:#333333;fill-opacity:1">Criterion A2</text>
+      </switch>
+    </g>
+    <rect
+       x="315.52264"
+       y="42.586777"
+       width="48.067532"
+       height="12.016883"
+       rx="1.8025324"
+       ry="1.8025324"
+       fill="#ffffff"
+       stroke="#000000"
+       pointer-events="all"
+       id="rect63478"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <g
+       transform="matrix(0.40056276,0,0,0.40056276,99.018477,42.386501)"
+       id="g63484"
+       style="fill:#333333;fill-opacity:1">
+      <switch
+         id="switch63482"
+         style="fill:#333333;fill-opacity:1">
+        <foreignObject
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+           style="overflow: visible; text-align: left;">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 15px; margin-left: 541px;">
+            <xhtml:div
+               data-drawio-colors="color: rgb(0, 0, 0); "
+               style="box-sizing: border-box; font-size: 0px; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                <xhtml:font
+                   style="font-size: 16px">
+                  <xhtml:b>Criterion A1</xhtml:b>
+                </xhtml:font>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="600"
+           y="19"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text63480"
+           style="fill:#333333;fill-opacity:1">Criterion A1</text>
+      </switch>
+    </g>
+    <rect
+       x="203.36507"
+       y="206.81754"
+       width="48.067532"
+       height="12.016883"
+       rx="1.8025324"
+       ry="1.8025324"
+       fill="#ffffff"
+       stroke="#000000"
+       pointer-events="all"
+       id="rect63486"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <g
+       transform="matrix(0.40056276,0,0,0.40056276,99.018477,42.386501)"
+       id="g63492"
+       style="fill:#333333;fill-opacity:1">
+      <switch
+         id="switch63490"
+         style="fill:#333333;fill-opacity:1">
+        <foreignObject
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+           style="overflow: visible; text-align: left;">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 425px; margin-left: 261px;">
+            <xhtml:div
+               data-drawio-colors="color: rgb(0, 0, 0); "
+               style="box-sizing: border-box; font-size: 0px; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                <xhtml:font
+                   style="font-size: 16px">
+                  <xhtml:b>Criterion C</xhtml:b>
+                </xhtml:font>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="320"
+           y="429"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text63488"
+           style="fill:#333333;fill-opacity:1">Criterion C</text>
+      </switch>
+    </g>
+    <rect
+       x="315.52264"
+       y="186.7894"
+       width="48.067532"
+       height="12.016883"
+       rx="1.8025324"
+       ry="1.8025324"
+       fill="#ffffff"
+       stroke="#000000"
+       pointer-events="all"
+       id="rect63494"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <g
+       transform="matrix(0.40056276,0,0,0.40056276,99.018477,42.386501)"
+       id="g63500"
+       style="fill:#333333;fill-opacity:1">
+      <switch
+         id="switch63498"
+         style="fill:#333333;fill-opacity:1">
+        <foreignObject
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+           style="overflow: visible; text-align: left;">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 375px; margin-left: 541px;">
+            <xhtml:div
+               data-drawio-colors="color: rgb(0, 0, 0); "
+               style="box-sizing: border-box; font-size: 0px; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                <xhtml:font
+                   style="font-size: 16px">
+                  <xhtml:b>Criterion C1</xhtml:b>
+                </xhtml:font>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="600"
+           y="379"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text63496"
+           style="fill:#333333;fill-opacity:1">Criterion C1</text>
+      </switch>
+    </g>
+    <rect
+       x="315.52264"
+       y="226.84567"
+       width="48.067532"
+       height="12.016883"
+       rx="1.8025324"
+       ry="1.8025324"
+       fill="#ffffff"
+       stroke="#000000"
+       pointer-events="all"
+       id="rect63502"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <g
+       transform="matrix(0.40056276,0,0,0.40056276,99.018477,42.386501)"
+       id="g63508"
+       style="fill:#333333;fill-opacity:1">
+      <switch
+         id="switch63506"
+         style="fill:#333333;fill-opacity:1">
+        <foreignObject
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+           style="overflow: visible; text-align: left;">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 475px; margin-left: 541px;">
+            <xhtml:div
+               data-drawio-colors="color: rgb(0, 0, 0); "
+               style="box-sizing: border-box; font-size: 0px; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                <xhtml:font
+                   style="font-size: 16px">
+                  <xhtml:b>Criterion C2</xhtml:b>
+                </xhtml:font>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="600"
+           y="479"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text63504"
+           style="fill:#333333;fill-opacity:1">Criterion C2</text>
+      </switch>
+    </g>
+    <path
+       d="m 139.27503,152.74154 h 63.19279"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="stroke"
+       id="path63510"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <path
+       d="m 198.91082,154.07542 4.00563,-1.33388 -4.00563,-1.33387"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="all"
+       id="path63512"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <path
+       d="m 139.27503,152.74154 63.43713,59.47156"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="stroke"
+       id="path63514"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <path
+       d="m 199.20323,210.75505 3.83338,1.76648 -2.00682,-3.71722"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="all"
+       id="path63516"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <path
+       d="M 251.43261,80.640244 314.72152,48.995786"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="stroke"
+       id="path63518"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <path
+       d="m 312.13789,51.779697 2.9842,-2.984192 -4.17787,0.596838"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="all"
+       id="path63520"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <path
+       d="m 251.43261,80.640244 63.2088,-11.852652"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="stroke"
+       id="path63522"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <path
+       d="m 311.39285,70.758361 3.68918,-2.050881 -4.18188,-0.576811"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="all"
+       id="path63524"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <path
+       d="m 251.43261,80.640244 63.20079,7.899098"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="stroke"
+       id="path63526"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <path
+       d="m 310.9362,89.424586 4.14182,-0.829165 -3.80935,-1.822561"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="all"
+       id="path63528"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <path
+       d="m 251.43261,80.640244 63.26888,27.678886"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="stroke"
+       id="path63530"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <path
+       d="m 310.90817,108.11885 4.2059,0.38054 -3.1364,-2.82798"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="all"
+       id="path63532"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <path
+       d="m 251.43261,152.74154 63.23684,-19.75976"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="stroke"
+       id="path63534"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <path
+       d="m 311.66923,135.31706 3.42482,-2.47147 -4.22194,-0.0801"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="all"
+       id="path63536"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <path
+       d="m 251.43261,152.74154 63.23684,19.75976"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="stroke"
+       id="path63538"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <path
+       d="m 310.87211,172.71761 4.22194,-0.0801 -3.42482,-2.47148"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="all"
+       id="path63540"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <path
+       d="m 251.43261,212.82596 63.23684,19.75976"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="stroke"
+       id="path63542"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <path
+       d="m 310.87211,232.80202 4.22194,-0.0801 -3.42482,-2.47147"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="all"
+       id="path63544"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <path
+       d="M 251.43261,212.82596 314.66945,193.0662"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="stroke"
+       id="path63546"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <path
+       d="m 311.66923,195.40148 3.42482,-2.47148 -4.22194,-0.0801"
+       fill="none"
+       stroke="#000000"
+       stroke-miterlimit="10"
+       pointer-events="all"
+       id="path63548"
+       style="stroke:#666666;stroke-width:0.400563" />
+    <switch
+       id="switch63558"
+       transform="matrix(0.40056276,0,0,0.40056276,98.849978,28.751494)">
+      <g
+         requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+         id="g63552" />
+      <a
+         transform="translate(0,-5)"
+         xlink:href="https://www.diagrams.net/doc/faq/svg-export-text-problems"
+         target="_blank"
+         id="a63556">
+        <text
+           text-anchor="middle"
+           font-size="10px"
+           x="50%"
+           y="100%"
+           id="text63554">Text is not SVG - cannot display</text>
+      </a>
+    </switch>
+    <g
+       id="g95033"
+       transform="translate(0.36878015,13.835289)">
+      <path
+         id="path94688"
+         style="fill:#ffffff;stroke:#666666;stroke-width:0.529167"
+         d="m 140.89062,138.90625 a 1.984375,1.984375 0 0 1 -1.98437,1.98437 1.984375,1.984375 0 0 1 -1.98438,-1.98437 1.984375,1.984375 0 0 1 1.98438,-1.98438 1.984375,1.984375 0 0 1 1.98437,1.98438 z" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 138.90625,137.58333 v 2.64584"
+         id="path94839" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 137.58333,138.90625 h 2.64584"
+         id="path94841" />
+    </g>
+    <g
+       id="g95033-8"
+       transform="translate(112.46706,-58.395955)">
+      <path
+         id="path94688-4"
+         style="fill:#ffffff;stroke:#666666;stroke-width:0.529167"
+         d="m 140.89062,138.90625 a 1.984375,1.984375 0 0 1 -1.98437,1.98437 1.984375,1.984375 0 0 1 -1.98438,-1.98437 1.984375,1.984375 0 0 1 1.98438,-1.98438 1.984375,1.984375 0 0 1 1.98437,1.98438 z" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 138.90625,137.58333 v 2.64584"
+         id="path94839-5" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 137.58333,138.90625 h 2.64584"
+         id="path94841-0" />
+    </g>
+    <rect
+       x="6.6145835"
+       y="24.166134"
+       width="31.22085"
+       height="8.9067831"
+       rx="1.8025324"
+       ry="1.8025324"
+       fill="#ffffff"
+       stroke="#000000"
+       pointer-events="all"
+       id="rect63422-9"
+       style="fill:#808080;stroke:none;stroke-width:0.400563" />
+    <g
+       transform="matrix(0.40056276,0,0,0.40056276,-106.0337,-9.4061618)"
+       id="g63428-5"
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.132106;stroke-miterlimit:4;stroke-dasharray:none">
+      <switch
+         id="switch63426-0"
+         style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.132106;stroke-miterlimit:4;stroke-dasharray:none">
+        <foreignObject
+           pointer-events="none"
+           width="100%"
+           height="100%"
+           requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+           style="overflow: visible; text-align: left;">
+          <xhtml:div
+             style="display: flex; align-items: unsafe center; justify-content: unsafe center; width: 118px; height: 1px; padding-top: 95px; margin-left: 261px;">
+            <xhtml:div
+               data-drawio-colors="color: rgb(0, 0, 0); "
+               style="box-sizing: border-box; font-size: 0px; text-align: center;">
+              <xhtml:div
+                 style="display: inline-block; font-size: 12px; font-family: Helvetica; color: rgb(0, 0, 0); line-height: 1.2; pointer-events: all; white-space: normal; overflow-wrap: normal;">
+                <xhtml:font
+                   style="font-size: 16px">
+                  <xhtml:b>Criterion A</xhtml:b>
+                </xhtml:font>
+              </xhtml:div>
+            </xhtml:div>
+          </xhtml:div>
+        </foreignObject>
+        <text
+           x="320"
+           y="99"
+           fill="#000000"
+           font-family="Helvetica"
+           font-size="12px"
+           text-anchor="middle"
+           id="text63424-4"
+           style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:0.132106;stroke-miterlimit:4;stroke-dasharray:none"><tspan
+             style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Helvetica;-inkscape-font-specification:'Helvetica Bold'"
+             id="tspan122535">New AHP</tspan></text>
+      </switch>
+    </g>
+    <g
+       id="g95033-3"
+       transform="translate(112.54743,13.835289)">
+      <path
+         id="path94688-6"
+         style="fill:#ffffff;stroke:#666666;stroke-width:0.529167"
+         d="m 140.89062,138.90625 a 1.984375,1.984375 0 0 1 -1.98437,1.98437 1.984375,1.984375 0 0 1 -1.98438,-1.98437 1.984375,1.984375 0 0 1 1.98438,-1.98438 1.984375,1.984375 0 0 1 1.98437,1.98438 z" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 138.90625,137.58333 v 2.64584"
+         id="path94839-1" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 137.58333,138.90625 h 2.64584"
+         id="path94841-06" />
+    </g>
+    <g
+       id="g95033-32"
+       transform="translate(112.53114,73.683843)">
+      <path
+         id="path94688-0"
+         style="fill:#ffffff;stroke:#666666;stroke-width:0.529167"
+         d="m 140.89062,138.90625 a 1.984375,1.984375 0 0 1 -1.98437,1.98437 1.984375,1.984375 0 0 1 -1.98438,-1.98437 1.984375,1.984375 0 0 1 1.98438,-1.98438 1.984375,1.984375 0 0 1 1.98437,1.98438 z" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 138.90625,137.58333 v 2.64584"
+         id="path94839-6" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 137.58333,138.90625 h 2.64584"
+         id="path94841-1" />
+    </g>
+    <g
+       id="g95033-5"
+       transform="translate(224.88422,-90.311022)">
+      <path
+         id="path94688-5"
+         style="fill:#ffffff;stroke:#666666;stroke-width:0.529167"
+         d="m 140.89062,138.90625 a 1.984375,1.984375 0 0 1 -1.98437,1.98437 1.984375,1.984375 0 0 1 -1.98438,-1.98437 1.984375,1.984375 0 0 1 1.98438,-1.98438 1.984375,1.984375 0 0 1 1.98437,1.98438 z" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 138.90625,137.58333 v 2.64584"
+         id="path94839-4" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 137.58333,138.90625 h 2.64584"
+         id="path94841-7" />
+    </g>
+    <g
+       id="g95033-5-6"
+       transform="translate(224.88422,-70.282883)">
+      <path
+         id="path94688-5-5"
+         style="fill:#ffffff;stroke:#666666;stroke-width:0.529167"
+         d="m 140.89062,138.90625 a 1.984375,1.984375 0 0 1 -1.98437,1.98437 1.984375,1.984375 0 0 1 -1.98438,-1.98437 1.984375,1.984375 0 0 1 1.98438,-1.98438 1.984375,1.984375 0 0 1 1.98437,1.98438 z" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 138.90625,137.58333 v 2.64584"
+         id="path94839-4-6" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 137.58333,138.90625 h 2.64584"
+         id="path94841-7-9" />
+    </g>
+    <g
+       id="g95033-5-3"
+       transform="translate(224.88422,-50.254745)">
+      <path
+         id="path94688-5-7"
+         style="fill:#ffffff;stroke:#666666;stroke-width:0.529167"
+         d="m 140.89062,138.90625 a 1.984375,1.984375 0 0 1 -1.98437,1.98437 1.984375,1.984375 0 0 1 -1.98438,-1.98437 1.984375,1.984375 0 0 1 1.98438,-1.98438 1.984375,1.984375 0 0 1 1.98437,1.98438 z" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 138.90625,137.58333 v 2.64584"
+         id="path94839-4-4" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 137.58333,138.90625 h 2.64584"
+         id="path94841-7-5" />
+    </g>
+    <g
+       id="g95033-5-3-4"
+       transform="translate(224.88422,-30.226609)">
+      <path
+         id="path94688-5-7-7"
+         style="fill:#ffffff;stroke:#666666;stroke-width:0.529167"
+         d="m 140.89062,138.90625 a 1.984375,1.984375 0 0 1 -1.98437,1.98437 1.984375,1.984375 0 0 1 -1.98438,-1.98437 1.984375,1.984375 0 0 1 1.98438,-1.98438 1.984375,1.984375 0 0 1 1.98437,1.98438 z" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 138.90625,137.58333 v 2.64584"
+         id="path94839-4-4-4" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 137.58333,138.90625 h 2.64584"
+         id="path94841-7-5-4" />
+    </g>
+    <g
+       id="g95033-5-3-3"
+       transform="translate(224.88422,-6.1928483)">
+      <path
+         id="path94688-5-7-0"
+         style="fill:#ffffff;stroke:#666666;stroke-width:0.529167"
+         d="m 140.89062,138.90625 a 1.984375,1.984375 0 0 1 -1.98437,1.98437 1.984375,1.984375 0 0 1 -1.98438,-1.98437 1.984375,1.984375 0 0 1 1.98438,-1.98438 1.984375,1.984375 0 0 1 1.98437,1.98438 z" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 138.90625,137.58333 v 2.64584"
+         id="path94839-4-4-7" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 137.58333,138.90625 h 2.64584"
+         id="path94841-7-5-8" />
+    </g>
+    <g
+       id="g95033-5-3-6"
+       transform="translate(224.88422,33.863434)">
+      <path
+         id="path94688-5-7-8"
+         style="fill:#ffffff;stroke:#666666;stroke-width:0.529167"
+         d="m 140.89062,138.90625 a 1.984375,1.984375 0 0 1 -1.98437,1.98437 1.984375,1.984375 0 0 1 -1.98438,-1.98437 1.984375,1.984375 0 0 1 1.98438,-1.98438 1.984375,1.984375 0 0 1 1.98437,1.98438 z" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 138.90625,137.58333 v 2.64584"
+         id="path94839-4-4-8" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 137.58333,138.90625 h 2.64584"
+         id="path94841-7-5-43" />
+    </g>
+    <g
+       id="g95033-5-3-1"
+       transform="translate(224.88422,53.891571)">
+      <path
+         id="path94688-5-7-4"
+         style="fill:#ffffff;stroke:#666666;stroke-width:0.529167"
+         d="m 140.89062,138.90625 a 1.984375,1.984375 0 0 1 -1.98437,1.98437 1.984375,1.984375 0 0 1 -1.98438,-1.98437 1.984375,1.984375 0 0 1 1.98438,-1.98438 1.984375,1.984375 0 0 1 1.98437,1.98438 z" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 138.90625,137.58333 v 2.64584"
+         id="path94839-4-4-9" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 137.58333,138.90625 h 2.64584"
+         id="path94841-7-5-2" />
+    </g>
+    <g
+       id="g95033-5-3-0"
+       transform="translate(224.88422,93.947838)">
+      <path
+         id="path94688-5-7-6"
+         style="fill:#ffffff;stroke:#666666;stroke-width:0.529167"
+         d="m 140.89062,138.90625 a 1.984375,1.984375 0 0 1 -1.98437,1.98437 1.984375,1.984375 0 0 1 -1.98438,-1.98437 1.984375,1.984375 0 0 1 1.98438,-1.98438 1.984375,1.984375 0 0 1 1.98437,1.98438 z" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 138.90625,137.58333 v 2.64584"
+         id="path94839-4-4-89" />
+      <path
+         style="font-variation-settings:normal;opacity:1;vector-effect:none;fill:#ffffff;fill-opacity:1;stroke:#666666;stroke-width:0.529167;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;-inkscape-stroke:none;stop-color:#000000;stop-opacity:1"
+         d="m 137.58333,138.90625 h 2.64584"
+         id="path94841-7-5-26" />
+    </g>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:5.64444px;line-height:1.25;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';fill:#808080;stroke:none;stroke-width:0.264583"
+       x="6.625608"
+       y="6.5346575"
+       id="text129604"><tspan
+         sodipodi:role="line"
+         id="tspan129602"
+         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:5.64444px;font-family:sans-serif;-inkscape-font-specification:sans-serif;fill:#808080;stroke:none;stroke-width:0.264583"
+         x="6.625608"
+         y="6.5346575">YEAHP v 0.0.0</tspan></text>
+  </g>
+</svg>

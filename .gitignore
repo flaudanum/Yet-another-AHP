@@ -110,3 +110,5 @@ ENV/
 # Scrapy stuff:
 .scrapy
 
+# Project HTML rendering
+project/**/*.html
