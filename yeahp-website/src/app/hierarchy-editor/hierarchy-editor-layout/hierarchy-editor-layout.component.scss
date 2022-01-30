@@ -1,8 +1,4 @@
-@import "src/scss/colors.scss";
-
-.hierarchy-editor-sidebar-container {
-  width: 300px;
-  background-color: white;
-  height: 100vh;
-  border-right: 2px solid $medium-grey;
+.hierarchy-editor-container {
+  display: flex;
+  flex-direction: row;
 }

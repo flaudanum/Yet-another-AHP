@@ -1,0 +1,8 @@
+@import "src/scss/colors.scss";
+
+aside {
+  width: 300px;
+  background-color: white;
+  height: 100vh;
+  border-right: 2px solid $medium-grey;
+}
