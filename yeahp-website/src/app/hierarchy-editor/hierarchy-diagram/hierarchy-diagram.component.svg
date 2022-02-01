@@ -1,0 +1,8 @@
+<svg width="100%" height="100%">
+  <g [attr.transform]="nodeTransform">
+    <rect class="rect-node" [attr.width]="nodeWidth" [attr.height]="nodeHeight" x="0" y="0" rx="5px" ry="5px" />
+    <text class="text-node" [attr.x]="nodeTextX + 'px'" [attr.y]="nodeTextY + 'px'">
+      The Goal
+    </text>
+  </g>
+</svg>
