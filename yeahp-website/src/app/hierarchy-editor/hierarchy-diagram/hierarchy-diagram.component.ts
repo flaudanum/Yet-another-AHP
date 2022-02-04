@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HierarchyNodePresentation } from './hierarchy-node-presentation';
 
 @Component({
   selector: 'app-hierarchy-diagram',
@@ -6,18 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./hierarchy-diagram.component.scss'],
 })
 export class HierarchyDiagramComponent implements OnInit {
-  public nodeTransform: string;
-  public nodeWidth: string;
-  public nodeHeight: string;
-  public nodeTextX: number;
-  public nodeTextY: number;
+  public hierarchyNodes: HierarchyNodePresentation[] = [];
 
   constructor() {
-    this.nodeTransform = 'translate(50,400)';
-    this.nodeWidth = '150px';
-    this.nodeHeight = '40px';
-    this.nodeTextX = 10;
-    this.nodeTextY = 30;
+    const newNode = new HierarchyNodePresentation('The Goal');
+    newNode.transform = 'translate(50,400)';
+    newNode.width = 150;
+    newNode.height = 40;
+    newNode.textX = 10;
+    newNode.textY = 30;
+    this.hierarchyNodes.push(newNode);
   }
 
   ngOnInit(): void {}
