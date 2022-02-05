@@ -11,13 +11,11 @@ export class HierarchyDiagramComponent implements OnInit {
 
   constructor() {
     const newNode = new HierarchyNodePresentation('The Goal');
-    newNode.transform = 'translate(50,400)';
-    newNode.width = 150;
-    newNode.height = 40;
-    newNode.textX = 10;
-    newNode.textY = 30;
+    newNode.transform = 'translate(50,300)';
     this.hierarchyNodes.push(newNode);
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(document.getElementsByTagName('text'));
+  }
 }
