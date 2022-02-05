@@ -1,5 +1,5 @@
 <svg width="100%" height="100%">
-  <g *ngFor="let node of hierarchyNodes;" [attr.transform]="node.transform" [id]="node.id">
+  <g *ngFor="let node of hierarchyPresentation;" [attr.transform]="node.transform" [id]="node.id">
     <rect class="rect-node" [attr.width]="node.pxWidth" [attr.height]="node.pxHeight" x="0" y="0" rx="5px" ry="5px" />
     <text class="text-node" [attr.x]="node.pxTextX" [attr.y]="node.pxTextY" text-anchor="middle"
       dominant-baseline="middle">

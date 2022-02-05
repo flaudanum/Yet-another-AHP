@@ -1,3 +1,5 @@
+import { Hierarchy } from '../models/hierarchy.model';
+
 export const hierarchyChooseAirline: Hierarchy = {
   goal: 'Choose an airline company',
   criteria: [
