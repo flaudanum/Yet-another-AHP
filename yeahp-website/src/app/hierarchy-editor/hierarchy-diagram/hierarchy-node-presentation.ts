@@ -47,10 +47,13 @@ export class HierarchyNodePresentation {
 
   constructor(title: string) {
     this.title = title;
+
+    // Standard dimensions of the box
     this._width = 150; // px
     this._height = 40; // px
-    this._textX = 10; // px
-    this._textY = 30; // px
+
+    this._textX = this._width * 0.5; // px
+    this._textY = this._height * 0.5; // px
     this._id = `node-${HierarchyNodePresentation.idCounter}`;
     HierarchyNodePresentation.idCounter++;
   }
