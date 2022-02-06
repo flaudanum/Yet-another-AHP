@@ -1,4 +1,8 @@
+fastapi
 jupyterlab
 numpy
+pydantic
+uvicorn[standard]
+# Dev dependencies
 pytest
 sphinx
