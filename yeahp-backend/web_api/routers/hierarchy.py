@@ -1,6 +1,9 @@
 from fastapi import APIRouter
 
 from web_api.models.hierarchy_graph import HierarchyGraph
+from web_api.models.location import Point
+from web_api.models.presentation_dimensions import PresentationDimensions
+from web_api.graph_drawing.compute_layout import compute_layout
 
 router = APIRouter(
     prefix="/hierarchy",
@@ -8,9 +11,6 @@ router = APIRouter(
 )
 
 
-@router.post("/layout/")
-async def compute_layout(graph: HierarchyGraph):
-    return {
-        "nodes": len(graph.nodes),
-        "edges": len(graph.edges),
-    }
+@router.post("/layout/", response_model=list[Point])
+def get_layout(graph: HierarchyGraph, dimensions: PresentationDimensions):
+    return compute_layout(graph, dimensions)
