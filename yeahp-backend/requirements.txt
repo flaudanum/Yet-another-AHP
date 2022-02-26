@@ -3,7 +3,10 @@ jupyterlab
 networkx
 numpy
 pydantic
+cvxpy
 uvicorn[standard]
 # Dev dependencies
+black
+jupyterlab_code_formatter
 pytest
 sphinx

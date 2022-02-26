@@ -22,6 +22,12 @@ def compute_layout(graph: HierarchyGraph, dimensions: PresentationDimensions) ->
     di_graph = nx.DiGraph()
     di_graph.add_edges_from(graph.edges)
 
+    nodes_bdist = nodes_by_dist(di_graph, hierarchy_root)
+
+    location_y: dict[str, float] = {node: 0. for node in graph.nodes}
+
+    parent = hierarchy_root
+
     return [
         Point(x=0, y=0, label="element0"),
         Point(x=0, y=0, label="element1"),
