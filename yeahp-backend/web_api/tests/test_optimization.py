@@ -1,11 +1,14 @@
 import networkx as nx
 import numpy as np
+import pytest
 from numpy.testing import assert_array_almost_equal_nulp
 
-from web_api.graph_drawing.optimization import build_equal_matrix
+from web_api.graph_drawing import optimization
+from web_api.graph_drawing.optimization import OptimizationSetupError
 
 
-def test_equality_matrix():
+@pytest.fixture(scope="function", name="graph")
+def graph_fixture():
     graph = nx.DiGraph()
     graph.add_edges_from([
         ["1", "2"],
@@ -15,16 +18,59 @@ def test_equality_matrix():
         ["3", "6"],
         ["3", "7"],
     ])
+    return graph
 
-    node_map = {
-        "1": (0, 0),
-        "2": (1, 0),
-        "3": (1, 1),
-        "4": (2, 0),
-        "5": (2, 1),
-        "6": (2, 2),
-        "7": (2, 3),
+
+@pytest.fixture(scope="function", name="graph2")
+def graph2_fixture():
+    graph = nx.DiGraph()
+    graph.add_edges_from([
+        ["A", "B"],
+        ["A", "C"],
+        ["C", "E"],
+        ["C", "D"],
+    ])
+    return graph
+
+
+def test_create_optimization_problem(graph):
+    optimization.Problem(graph, root="1")
+
+    for bad_node in ["2", "kaboom!"]:
+        with pytest.raises(OptimizationSetupError) as excinfo:
+            optimization.Problem(graph, root=bad_node)
+
+        excinfo.match(f"Constructor: node '{bad_node}' is not a tree root")
+
+
+def test_graph_labels(graph):
+    problem = optimization.Problem(graph, root="1")
+    ref = (
+        ("1", (0, 0)),
+        ("2", (1, 0)),
+        ("3", (1, 1)),
+        ("4", (2, 0)),
+        ("5", (2, 1)),
+        ("6", (2, 2)),
+        ("7", (2, 3)),
+    )
+    for node, label in ref:
+        assert problem.node_label(node) == label
+
+
+def test_coordinate_map(graph2):
+    problem = optimization.Problem(graph2, root="A")
+    assert problem.coord_map == {
+        "A": 0,
+        "B": 1,
+        "C": 2,
+        "E": 3,
+        "D": 4
     }
+
+
+def test_equality_matrix(graph):
+    problem = optimization.Problem(graph, root="1")
 
     mat_a_eq_ref = np.array([
         [1, 1, 0, 0, 0, 0],
@@ -33,6 +79,6 @@ def test_equality_matrix():
     ])
 
     assert_array_almost_equal_nulp(
-        build_equal_matrix(graph, node_map),
+        problem.equality_matrix(),
         mat_a_eq_ref
     )

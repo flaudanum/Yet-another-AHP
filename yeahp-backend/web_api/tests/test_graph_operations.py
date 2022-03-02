@@ -1,7 +1,8 @@
 import networkx as nx
 import pytest
 
-from web_api.graph_drawing.compute_layout import compute_layout, nodes_by_dist, relabel_nodes
+from web_api.graph_drawing.compute_layout import compute_layout
+from web_api.graph_drawing.optimization import nodes_by_dist, relabel_nodes
 from web_api.models.hierarchy_graph import HierarchyGraph
 from web_api.models.presentation_dimensions import PresentationDimensions
 
