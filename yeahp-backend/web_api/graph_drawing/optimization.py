@@ -41,6 +41,14 @@ class Problem:
     def coord_map(self):
         return self._coord_map
 
+    @property
+    def size(self):
+        return self._size
+
+    @property
+    def tree_depth(self):
+        return self._tree_depth
+
     def __init__(self, graph: nx.DiGraph, root: str):
         try:
             if list(graph.predecessors(root)):
@@ -62,22 +70,58 @@ class Problem:
         self._coord_map = {}
         self._compute_coord_map()
 
+        # Problem's dimension
+        self._size = len(self._coord_map)
+
+        # Tree's depth
+        self._tree_depth: int = max([node_data[1]["label"][0] for node_data in self._graph.nodes(data=True)]) + 1
+
     def _compute_coord_map(self):
+        """
+        Maps of nodes to coordinate indices
+        """
         nodes_label_map = self._graph.nodes(data=True)
 
         # Sort nodes by label
         self._coord_map = {
-            node_data[0]: index
+            node_data[0]: index - 1
             for index, node_data in
             enumerate(sorted(nodes_label_map, key=lambda node_data: node_data[1]["label"]))
+            if node_data[1]["label"] != (0, 0)
         }
 
     def equality_matrix(self) -> np.ndarray:
-        nodes = [self._root]
+        """
+        This matrix stands for the barycentric relation between the position of a node and children
+        """
+        matrix = np.zeros(shape=(self._tree_depth, self._size))
 
+        nodes = [self._root]
+        row = 0
+
+        # Breadth first traversal of the tree
         while nodes:
             parent = nodes.pop(0)
             # Gets child nodes
-            successors = self._graph.successors(parent)
+            successors = list(self._graph.successors(parent))
+
+            # If there are no child nodes then there is no barycentric relation
+            if not successors:
+                continue
+
             # Adds successors to the graph traversal
             nodes += successors
+
+            # Coordinates of the parent node
+            parent_coord: int | None = self._coord_map.get(parent)
+
+            if parent_coord is not None:
+                matrix[row, parent_coord] = 2
+
+            for node in successors:
+                coord = self._coord_map[node]
+                matrix[row, coord] = -1
+
+            row += 1
+
+        return matrix

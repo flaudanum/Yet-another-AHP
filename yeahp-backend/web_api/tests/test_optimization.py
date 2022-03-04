@@ -58,14 +58,23 @@ def test_graph_labels(graph):
         assert problem.node_label(node) == label
 
 
+def test_tree_depth(graph):
+    problem = optimization.Problem(graph, root="1")
+    assert problem.tree_depth == 3
+
+
+def test_problem_dimension(graph):
+    problem = optimization.Problem(graph, root="1")
+    assert problem.size == 6
+
+
 def test_coordinate_map(graph2):
     problem = optimization.Problem(graph2, root="A")
     assert problem.coord_map == {
-        "A": 0,
-        "B": 1,
-        "C": 2,
-        "E": 3,
-        "D": 4
+        "B": 0,
+        "C": 1,
+        "E": 2,
+        "D": 3
     }
 
 
@@ -73,7 +82,7 @@ def test_equality_matrix(graph):
     problem = optimization.Problem(graph, root="1")
 
     mat_a_eq_ref = np.array([
-        [1, 1, 0, 0, 0, 0],
+        [-1, -1, 0, 0, 0, 0],
         [2, 0, -1, -1, 0, 0],
         [0, 2, 0, 0, -1, -1]
     ])
