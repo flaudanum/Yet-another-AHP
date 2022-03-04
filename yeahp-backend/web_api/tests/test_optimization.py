@@ -91,3 +91,29 @@ def test_equality_matrix(graph):
         problem.equality_matrix(),
         mat_a_eq_ref
     )
+
+
+def test_inequality_operator(graph):
+    problem = optimization.Problem(graph, root="1")
+
+    operator = problem.inequality_operator()
+
+    reference = {
+        "matrix": np.array([
+            [-1, 1, 0, 0, 0, 0],
+            [0, 0, -1, 1, 0, 0],
+            [0, 0, 0, -1, 1, 0],
+            [0, 0, 0, 0, -1, 1],
+        ]),
+        "vector": np.array([1, 1, 1, 1])
+    }
+
+    assert_array_almost_equal_nulp(
+        operator.matrix,
+        reference["matrix"]
+    )
+
+    assert_array_almost_equal_nulp(
+        operator.vector,
+        reference["vector"]
+    )

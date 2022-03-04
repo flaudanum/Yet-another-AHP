@@ -1,3 +1,5 @@
+from dataclasses import dataclass
+
 import networkx as nx
 import numpy as np
 
@@ -6,7 +8,7 @@ class OptimizationSetupError(Exception):
     ...
 
 
-def nodes_by_dist(graph: nx.DiGraph, hierarchy_root: str) -> dict[int, list]:
+def nodes_by_depth(graph: nx.DiGraph, hierarchy_root: str) -> dict[int, list]:
     shortest_paths = nx.shortest_path(graph, hierarchy_root)
     classification: dict[int, list] = {}
     for node, path in shortest_paths.items():
@@ -19,7 +21,7 @@ def nodes_by_dist(graph: nx.DiGraph, hierarchy_root: str) -> dict[int, list]:
 
 
 def relabel_nodes(graph: nx.DiGraph, hierarchy_root: str) -> dict[str, tuple[int]]:
-    classification = nodes_by_dist(graph, hierarchy_root)
+    classification = nodes_by_depth(graph, hierarchy_root)
     node_map = {}
 
     for depth, nodes in classification.items():
@@ -30,6 +32,12 @@ def relabel_nodes(graph: nx.DiGraph, hierarchy_root: str) -> dict[str, tuple[int
         })
 
     return node_map
+
+
+@dataclass
+class InequalityOperator:
+    matrix: np.ndarray
+    vector: np.ndarray
 
 
 class Problem:
@@ -125,3 +133,39 @@ class Problem:
             row += 1
 
         return matrix
+
+    def inequality_operator(self) -> InequalityOperator:
+        matrix = []
+        vector = []
+
+        nodes_by_depth_items: list[[int, list[int]]] = sorted(
+            nodes_by_depth(self._graph, self._root).items(),
+            key=lambda item: item[0]
+        )
+
+        depth_classification = [
+            pair[1]
+            for pair in
+            nodes_by_depth_items
+        ]
+
+        for nodes in depth_classification:
+            nodes: list[int]
+            while nodes:
+                node0 = nodes.pop(0)
+                if not nodes:
+                    continue
+                node1 = nodes[0]
+                row = np.zeros(shape=(self._size,))
+                coord0 = self._coord_map[node0]
+                coord1 = self._coord_map[node1]
+                row[coord0] = -1.
+                row[coord1] = 1.
+
+                matrix.append(row)
+                vector.append(1.)
+
+        return InequalityOperator(
+            matrix=np.array(matrix),
+            vector=np.array(vector)
+        )

@@ -1,6 +1,6 @@
 import networkx as nx
 
-from web_api.graph_drawing.optimization import nodes_by_dist
+from web_api.graph_drawing.optimization import nodes_by_depth
 from web_api.models.hierarchy_graph import HierarchyGraph
 from web_api.models.location import Point
 from web_api.models.presentation_dimensions import PresentationDimensions
@@ -11,7 +11,7 @@ def compute_layout(graph: HierarchyGraph, dimensions: PresentationDimensions) ->
     di_graph = nx.DiGraph()
     di_graph.add_edges_from(graph.edges)
 
-    nodes_bdist = nodes_by_dist(di_graph, hierarchy_root)
+    nodes_bdist = nodes_by_depth(di_graph, hierarchy_root)
 
     location_y: dict[str, float] = {node: 0. for node in graph.nodes}
 

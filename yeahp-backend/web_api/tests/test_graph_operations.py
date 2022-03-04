@@ -2,12 +2,12 @@ import networkx as nx
 import pytest
 
 from web_api.graph_drawing.compute_layout import compute_layout
-from web_api.graph_drawing.optimization import nodes_by_dist, relabel_nodes
+from web_api.graph_drawing.optimization import nodes_by_depth, relabel_nodes
 from web_api.models.hierarchy_graph import HierarchyGraph
 from web_api.models.presentation_dimensions import PresentationDimensions
 
 
-def test_nodes_by_dist():
+def test_nodes_by_depth():
     graph = nx.DiGraph()
     graph.add_edges_from([
         ["1", "2"],
@@ -15,18 +15,18 @@ def test_nodes_by_dist():
         ["1", "4"],
         ["2", "5"],
         ["2", "6"],
-        ["3", "7"],
+        ["3", "9"],
         ["3", "8"],
-        ["3", "9"]
+        ["3", "7"]
     ])
     root = "1"
 
-    classification = nodes_by_dist(graph, root)
+    classification = nodes_by_depth(graph, root)
 
     assert classification == {
         1: ['1'],
         2: ['2', '3', '4'],
-        3: ['5', '6', '7', '8', '9']
+        3: ['5', '6', '9', '8', '7']
     }
 
 
