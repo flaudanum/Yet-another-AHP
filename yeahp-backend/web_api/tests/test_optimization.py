@@ -1,7 +1,7 @@
 import networkx as nx
 import numpy as np
 import pytest
-from numpy.testing import assert_array_almost_equal_nulp
+from numpy.testing import assert_array_almost_equal_nulp, assert_allclose
 
 from web_api.graph_drawing import optimization
 from web_api.graph_drawing.optimization import OptimizationSetupError
@@ -116,4 +116,28 @@ def test_inequality_operator(graph):
     assert_array_almost_equal_nulp(
         operator.vector,
         reference["vector"]
+    )
+
+
+def test_cost_function_linear_form(graph):
+    problem = optimization.Problem(graph, root="1")
+
+    reference = np.array([-1, 1, -1, 0, 0, 1])
+
+    assert_array_almost_equal_nulp(
+        problem.cost_func_linform(),
+        reference
+    )
+
+
+def test_solver(graph):
+    problem = optimization.Problem(graph, root="1")
+
+    #  [-30.  30. -45. -15.  15.  45.]
+    reference = np.array([0, -1, 1, -1.5, -0.5, 0.5, 1.5])
+
+    assert_allclose(
+        problem.solve(),
+        reference,
+        rtol=1e-8
     )

@@ -1,5 +1,7 @@
+from copy import deepcopy
 from dataclasses import dataclass
 
+import cvxpy as cp
 import networkx as nx
 import numpy as np
 
@@ -50,6 +52,10 @@ class Problem:
         return self._coord_map
 
     @property
+    def depth_classification(self):
+        return deepcopy(self._depth_classification)
+
+    @property
     def size(self):
         return self._size
 
@@ -81,6 +87,9 @@ class Problem:
         # Problem's dimension
         self._size = len(self._coord_map)
 
+        # Classification of nodes by depth
+        self._depth_classification = self._classify_by_depth()
+
         # Tree's depth
         self._tree_depth: int = max([node_data[1]["label"][0] for node_data in self._graph.nodes(data=True)]) + 1
 
@@ -97,6 +106,18 @@ class Problem:
             enumerate(sorted(nodes_label_map, key=lambda node_data: node_data[1]["label"]))
             if node_data[1]["label"] != (0, 0)
         }
+
+    def _classify_by_depth(self):
+        nodes_by_depth_items: list[[int, list[int]]] = sorted(
+            nodes_by_depth(self._graph, self._root).items(),
+            key=lambda item: item[0]
+        )
+
+        return [
+            pair[1]
+            for pair in
+            nodes_by_depth_items
+        ]
 
     def equality_matrix(self) -> np.ndarray:
         """
@@ -138,18 +159,7 @@ class Problem:
         matrix = []
         vector = []
 
-        nodes_by_depth_items: list[[int, list[int]]] = sorted(
-            nodes_by_depth(self._graph, self._root).items(),
-            key=lambda item: item[0]
-        )
-
-        depth_classification = [
-            pair[1]
-            for pair in
-            nodes_by_depth_items
-        ]
-
-        for nodes in depth_classification:
+        for nodes in self.depth_classification:
             nodes: list[int]
             while nodes:
                 node0 = nodes.pop(0)
@@ -169,3 +179,29 @@ class Problem:
             matrix=np.array(matrix),
             vector=np.array(vector)
         )
+
+    def cost_func_linform(self):
+        linform_vector = np.zeros(shape=(self._size,))
+
+        for nodes in self.depth_classification[1:]:
+            node0 = nodes[0]
+            node1 = nodes[-1]
+
+            coord0 = self._coord_map[node0]
+            coord1 = self._coord_map[node1]
+            linform_vector[coord0] = -1
+            linform_vector[coord1] = 1
+
+        return linform_vector
+
+    def solve(self):
+        mat_eq = self.equality_matrix()
+        ineq_op = self.inequality_operator()
+        lform_cost = self.cost_func_linform()
+        x = cp.Variable(shape=(6,), name="X")
+        constraints = [cp.matmul(mat_eq, x) == 0, ineq_op.matrix @ x >= ineq_op.vector]
+        objective = cp.Minimize(cp.matmul(lform_cost, x))
+        problem = cp.Problem(objective, constraints)
+        problem.solve()
+
+        return np.array([0, *x.value])
