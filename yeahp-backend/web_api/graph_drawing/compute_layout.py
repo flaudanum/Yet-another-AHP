@@ -1,23 +1,20 @@
 import networkx as nx
 
-from web_api.graph_drawing.optimization import nodes_by_depth
+from web_api.graph_drawing import optimization
 from web_api.models.hierarchy_graph import HierarchyGraph
-from web_api.models.location import Point
-from web_api.models.presentation_dimensions import PresentationDimensions
+from web_api.models.layout import Layout
 
 
-def compute_layout(graph: HierarchyGraph, dimensions: PresentationDimensions) -> list[Point]:
-    hierarchy_root = graph.nodes[0]
-    di_graph = nx.DiGraph()
-    di_graph.add_edges_from(graph.edges)
+def compute_layout(hierarchy: HierarchyGraph) -> Layout:
+    root = hierarchy.root
+    graph = nx.DiGraph()
+    graph.add_edges_from(hierarchy.dependencies)
 
-    nodes_bdist = nodes_by_depth(di_graph, hierarchy_root)
+    problem = optimization.Problem(graph, root)
 
-    location_y: dict[str, float] = {node: 0. for node in graph.nodes}
+    y_coordinates = problem.solve()
 
-    parent = hierarchy_root
-
-    return [
-        Point(x=0, y=0, label="element0"),
-        Point(x=0, y=0, label="element1"),
-    ]
+    return Layout(
+        y_coordinates=list(zip(graph.nodes, y_coordinates)),
+        class_by_depth=problem.depth_classification
+    )
