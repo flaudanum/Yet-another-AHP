@@ -7,6 +7,8 @@ import pytest
 
 from yeahp.criterion import Criterion
 
+pytestmark = [pytest.mark.yeahp_compute]
+
 
 def test_create():
     """
@@ -23,6 +25,7 @@ def test_create():
     assert criterion_obj.children == tuple(children_obj)
     for child in criterion_obj.children:
         assert child.is_covering()
+
 
 # TODO: check that the description are blank-stripped
 

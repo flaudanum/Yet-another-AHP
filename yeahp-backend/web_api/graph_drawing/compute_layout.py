@@ -4,6 +4,9 @@ from web_api.graph_drawing import optimization
 from web_api.models.hierarchy_graph import HierarchyGraph
 from web_api.models.layout import Layout
 
+PRECISION_DIGIT = 5
+prec_scale = 10 ** PRECISION_DIGIT
+
 
 def compute_layout(hierarchy: HierarchyGraph) -> Layout:
     root = hierarchy.root
@@ -12,7 +15,11 @@ def compute_layout(hierarchy: HierarchyGraph) -> Layout:
 
     problem = optimization.Problem(graph, root)
 
-    y_coordinates = problem.solve()
+    y_coordinates = [
+        round(coord * prec_scale) / prec_scale
+        for coord in
+        problem.solve()
+    ]
 
     return Layout(
         y_coordinates=list(zip(graph.nodes, y_coordinates)),
