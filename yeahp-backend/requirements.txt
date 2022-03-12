@@ -1,9 +1,10 @@
+click
+cvxpy
 fastapi
 jupyterlab
 networkx
 numpy
 pydantic
-cvxpy
 uvicorn[standard]
 # Dev dependencies
 black
