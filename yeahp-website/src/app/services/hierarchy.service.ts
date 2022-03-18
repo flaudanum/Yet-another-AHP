@@ -3,7 +3,10 @@ import { Hierarchy } from '../models/hierarchy.model';
 import { hierarchyChooseAirline } from './hierarchy.fake.data';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { HierarchyLayout } from '../models/hierarchy_layout.model';
+import {
+  HierarchyLayout,
+  HierarchyLayoutPayload,
+} from '../models/hierarchy_layout.model';
 
 @Injectable({
   providedIn: 'root',
@@ -15,10 +18,15 @@ export class HierarchyService {
     return hierarchyChooseAirline;
   }
 
-  getHierarchyLayout(): Observable<HierarchyLayout> {
+  getHierarchyLayout(hierarchy: Hierarchy): Observable<HierarchyLayout> {
+    const payload: HierarchyLayoutPayload = {
+      root: hierarchy.goal,
+      dependencies: hierarchy.dependencies,
+    };
+    // TODO: configure CORS on backend
     return this._httpClient.post<HierarchyLayout>(
-      'localhost:8000/hierarchy/layout/',
-      {}
+      'http://localhost:8000/hierarchy/layout/',
+      payload
     );
   }
 }

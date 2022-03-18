@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Graph } from 'src/app/models/graph.model';
 import { Hierarchy } from 'src/app/models/hierarchy.model';
+import { HierarchyLayout } from 'src/app/models/hierarchy_layout.model';
 import { HierarchyService } from 'src/app/services/hierarchy.service';
 import { HierarchyNodePresentation } from './hierarchy-node-presentation';
 
@@ -45,6 +46,12 @@ export class HierarchyDiagramComponent implements OnInit {
       // Pushes the criterion's presentation to the list of displayed presentations
       this.hierarchyPresentation.push(criterionPres);
     });
+
+    this._hierarchyService
+      .getHierarchyLayout(this.hierarchy)
+      .subscribe((layout: HierarchyLayout) => {
+        console.log(layout);
+      });
 
     /*
     // Creates a new node associated to the goal in the hierarchy graph

@@ -11,6 +11,8 @@ app = FastAPI()
 app.include_router(hierarchy.router)
 
 
+# TODO: add CORS management
+
 @click.command(name='plot')
 @click.option('--host', "host", type=click.STRING, default="127.0.0.1", help="Host where the server is running")
 @click.option('--port', "port", type=click.INT, default=8000, help="Listening port")
