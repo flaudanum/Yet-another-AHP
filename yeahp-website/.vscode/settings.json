@@ -9,6 +9,9 @@
     "[typescript]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode",
         "editor.tabSize": 2,
-        "editor.detectIndentation": false
+        "editor.detectIndentation": false,
+        "editor.wordWrap": "wordWrapColumn",
+        "editor.rulers": [120],
+        "editor.wordWrapColumn": 120
     }
 }
