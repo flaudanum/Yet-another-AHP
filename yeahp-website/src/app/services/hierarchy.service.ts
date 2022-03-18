@@ -3,7 +3,7 @@ import { Hierarchy } from '../models/hierarchy.model';
 import { hierarchyChooseAirline } from './hierarchy.fake.data';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { HierarchyLayout } from '../models/hierarchy_layou.model';
+import { HierarchyLayout } from '../models/hierarchy_layout.model';
 
 @Injectable({
   providedIn: 'root',
