@@ -13,9 +13,9 @@ export const hierarchyChooseAirline: Hierarchy = {
     'Discounts with partner companies',
   ],
   dependencies: [
-    ['goal', 'Service on board'],
-    ['goal', 'Reliability'],
-    ['goal', 'Pricing'],
+    ['Choose an airline company', 'Service on board'],
+    ['Choose an airline company', 'Reliability'],
+    ['Choose an airline company', 'Pricing'],
     ['Service on board', 'Snack'],
     ['Service on board', 'Crew'],
     ['Pricing', 'Tickets'],

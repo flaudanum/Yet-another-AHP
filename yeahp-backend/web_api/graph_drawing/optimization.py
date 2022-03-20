@@ -152,6 +152,7 @@ class Problem:
             # Coordinates of the parent node
             parent_coord: int | None = self._coord_map.get(parent)
 
+            # TODO: fix this equation which is hardcoded for 2 child dependencies
             if parent_coord is not None:
                 matrix[row, parent_coord] = 2
 

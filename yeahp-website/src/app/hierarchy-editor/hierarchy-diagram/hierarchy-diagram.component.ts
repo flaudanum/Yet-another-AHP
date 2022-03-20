@@ -23,7 +23,6 @@ export class HierarchyDiagramComponent implements OnInit {
 
   ngOnInit(): void {
     this.hierarchy = this._hierarchyService.getHierarchy();
-    console.log(this.hierarchy);
     this.refreshNodes();
   }
 
@@ -33,24 +32,52 @@ export class HierarchyDiagramComponent implements OnInit {
     if (this.hierarchy === undefined) {
       return;
     }
-    // Presentation of the goal element
-    const goalPres = new HierarchyNodePresentation(this.hierarchy.goal);
-
-    // Pushes the goal presentation to the list of displayed presentations
-    this.hierarchyPresentation.push(goalPres);
-
-    this.hierarchy.criteria.forEach((criterion: string) => {
-      // Presentation of the criterion element
-      const criterionPres = new HierarchyNodePresentation(criterion);
-
-      // Pushes the criterion's presentation to the list of displayed presentations
-      this.hierarchyPresentation.push(criterionPres);
-    });
 
     this._hierarchyService
       .getHierarchyLayout(this.hierarchy)
       .subscribe((layout: HierarchyLayout) => {
-        console.log(layout);
+        const yCoordMap: Map<string, number> = new Map();
+        const depthMap: Map<string, number> = new Map();
+
+        let depth: number = 0;
+        layout.class_by_depth.forEach((depthClass: string[]) => {
+          depthClass.forEach((node: string) => {
+            depthMap.set(node, depth);
+          });
+          depth++;
+        });
+
+        layout.y_coordinates.forEach((coord: [string, number]) => {
+          const node: string = coord[0];
+          const yNormCoord: number = coord[1];
+          yCoordMap.set(node, yNormCoord);
+        });
+
+        // Sets the offset so that the minimal normalized y-coordinate is 0
+        HierarchyNodePresentation.yNormOffset = -Math.min(
+          ...yCoordMap.values()
+        );
+
+        // Presentation of the goal element
+        const goalPres = new HierarchyNodePresentation(
+          this.hierarchy?.goal ?? 'Missing Goal'
+        );
+
+        goalPres.setLocation(0, 0);
+
+        // Pushes the goal presentation to the list of displayed presentations
+        this.hierarchyPresentation.push(goalPres);
+        this.hierarchy?.criteria.forEach((criterion: string) => {
+          // Presentation of the criterion element
+          const criterionPres = new HierarchyNodePresentation(criterion);
+          criterionPres.setLocation(
+            depthMap.get(criterion) ?? 0,
+            yCoordMap.get(criterion) ?? 0
+          );
+
+          // Pushes the criterion's presentation to the list of displayed presentations
+          this.hierarchyPresentation.push(criterionPres);
+        });
       });
 
     /*

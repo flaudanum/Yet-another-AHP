@@ -23,7 +23,6 @@ export class HierarchyService {
       root: hierarchy.goal,
       dependencies: hierarchy.dependencies,
     };
-    // TODO: configure CORS on backend
     return this._httpClient.post<HierarchyLayout>(
       'http://localhost:8000/hierarchy/layout/',
       payload
