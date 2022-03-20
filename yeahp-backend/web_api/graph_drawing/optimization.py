@@ -1,3 +1,4 @@
+import json
 from copy import deepcopy
 from dataclasses import dataclass
 
@@ -66,9 +67,16 @@ class Problem:
     def __init__(self, graph: nx.DiGraph, root: str):
         try:
             if list(graph.predecessors(root)):
-                raise OptimizationSetupError(f"Constructor: node '{root}' is not a tree root")
+                raise OptimizationSetupError(json.dumps({
+                    "message": f"Constructor: node '{root}' is not the root of the hierarchy"
+                }))
         except nx.exception.NetworkXError as err:
-            raise OptimizationSetupError(f"Constructor: node '{root}' is not a tree root ({err})")
+            raise OptimizationSetupError(json.dumps({
+                "message": f"Constructor: node '{root}' does not exist",
+                "error_class": repr(type(err)),
+                "error": str(err),
+                "nodes": sorted(graph.nodes)
+            }))
 
         # The graph is expected to be a tree, this node is the declared root
         self._root = root
@@ -198,7 +206,7 @@ class Problem:
         mat_eq = self.equality_matrix()
         ineq_op = self.inequality_operator()
         lform_cost = self.cost_func_linform()
-        x = cp.Variable(shape=(6,), name="X")
+        x = cp.Variable(shape=(self._size,), name="X")
         constraints = [cp.matmul(mat_eq, x) == 0, ineq_op.matrix @ x >= ineq_op.vector]
         objective = cp.Minimize(cp.matmul(lform_cost, x))
         problem = cp.Problem(objective, constraints)
