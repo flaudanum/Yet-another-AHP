@@ -3,6 +3,8 @@ from pathlib import Path
 import click
 import uvicorn
 from fastapi import FastAPI
+
+from web_api.cors_setup import setup_cors
 from web_api.routers import hierarchy
 
 app = FastAPI()
@@ -10,8 +12,9 @@ app = FastAPI()
 # Registers routers
 app.include_router(hierarchy.router)
 
+# Setup CORS management
+setup_cors(app)
 
-# TODO: add CORS management
 
 @click.command(name='plot')
 @click.option('--host', "host", type=click.STRING, default="127.0.0.1", help="Host where the server is running")
