@@ -10,6 +10,8 @@ import numpy.testing as npt
 
 from yeahp.judgement import Judgement
 
+pytestmark = [pytest.mark.yeahp_compute]
+
 
 @pytest.fixture(scope='module', name='judg_obj')
 def judg_obj_fixture():
@@ -18,11 +20,11 @@ def judg_obj_fixture():
 
     judg_obj = Judgement(labels=descriptions)
 
-    judg_obj.compare('element #1', 'element #2', 1/3)
+    judg_obj.compare('element #1', 'element #2', 1 / 3)
     judg_obj.compare('element #1', 'element #3', 3)
-    judg_obj.compare('element #1', 'element #4', 1/5)
+    judg_obj.compare('element #1', 'element #4', 1 / 5)
     judg_obj.compare('element #2', 'element #3', 5)
-    judg_obj.compare('element #2', 'element #4', 1/3)
+    judg_obj.compare('element #2', 'element #4', 1 / 3)
     judg_obj.compare('element #3', 'element #4', 9)
 
     return judg_obj
@@ -93,7 +95,7 @@ def test_consistency_deviation(ref_comp_matrix, judg_obj):
     w = np.real(w / w.sum())
     D = np.diag(w)
     E = np.dot(np.linalg.solve(D, ref_comp_matrix), D)
-    npt.assert_array_almost_equal_nulp(E-1, judg_obj.deviation_matrix())
+    npt.assert_array_almost_equal_nulp(E - 1, judg_obj.deviation_matrix())
 
 
 def test_create_failure():
@@ -107,11 +109,11 @@ def test_create_failure():
 
     judg_obj = Judgement(labels=descriptions)
 
-    judg_obj.compare('element #1', 'element #2', 1/3)
+    judg_obj.compare('element #1', 'element #2', 1 / 3)
     judg_obj.compare('element #1', 'element #3', 3)
-    judg_obj.compare('element #1', 'element #4', 1/5)
+    judg_obj.compare('element #1', 'element #4', 1 / 5)
     judg_obj.compare('element #2', 'element #3', 5)
-    judg_obj.compare('element #2', 'element #4', 1/3)
+    judg_obj.compare('element #2', 'element #4', 1 / 3)
     # judg_obj.compare('element #3', 'element #4', 9) This comparison is missing
 
     with pytest.raises(ValueError) as excinfo:

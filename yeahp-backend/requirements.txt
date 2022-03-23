@@ -1,4 +1,13 @@
+click
+cvxpy
+fastapi
 jupyterlab
+networkx
 numpy
+pydantic
+uvicorn[standard]
+# Dev dependencies
+black
+jupyterlab_code_formatter
 pytest
 sphinx

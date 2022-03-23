@@ -10,6 +10,8 @@ import numpy.testing as npt
 from yeahp.ahp import Ahp
 from yeahp.criterion import Criterion
 
+pytestmark = [pytest.mark.yeahp_compute]
+
 
 @pytest.fixture(scope="module", name="ahp_obj")
 def ahp_obj_fixture():
