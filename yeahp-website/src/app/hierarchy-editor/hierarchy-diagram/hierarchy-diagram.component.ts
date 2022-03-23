@@ -39,7 +39,7 @@ export class HierarchyDiagramComponent implements OnInit {
         const yCoordMap: Map<string, number> = new Map();
         const depthMap: Map<string, number> = new Map();
 
-        let depth: number = 0;
+        let depth = 0;
         layout.class_by_depth.forEach((depthClass: string[]) => {
           depthClass.forEach((node: string) => {
             depthMap.set(node, depth);
@@ -79,51 +79,5 @@ export class HierarchyDiagramComponent implements OnInit {
           this.hierarchyPresentation.push(criterionPres);
         });
       });
-
-    /*
-    // Creates a new node associated to the goal in the hierarchy graph
-    this.graph.addNode(goalPres.id, goalPres);
-
-    let queue: Array<[string, Criterion[]]> = [];
-    queue.push([goalPres.id, this.hierarchy.criteria]);
-    while (queue) {
-      const item: [string, Criterion[]] | undefined = queue.shift();
-      // Asserts type of criterion as undefined
-      if (!item) {
-        break;
-      }
-      queue = [...queue, ...this.growGraph(...item)];
-    }
-    */
   }
-
-  // growGraph(
-  //   parentId: string,
-  //   children: Criterion[]
-  // ): Array<[string, Criterion[]]> {
-  //   // Asserts that hierarchy data is available
-  //   if (this.hierarchy === undefined) {
-  //     return [];
-  //   }
-  //   const toBeQueued: Array<[string, Criterion[]]> = [];
-
-  //   children.forEach((child: Criterion) => {
-  //     // Presentation of the child element
-  //     const elementPres = new HierarchyNodePresentation(child.title);
-
-  //     // Pushes the child element's presentation to the list of displayed presentations
-  //     this.hierarchyPresentation.push(elementPres);
-
-  //     // Creates a new node associated to the child element in the hierarchy
-  //     this.graph.addNode(elementPres.id, elementPres);
-
-  //     // Creates an edge from the parent to the child element
-  //     this.graph.addEdge(parentId, elementPres.id);
-
-  //     // Grows the queue of elements to be processed
-  //     toBeQueued.push([elementPres.id, child.subCriteria]);
-  //   });
-
-  //   return toBeQueued;
-  // }
 }

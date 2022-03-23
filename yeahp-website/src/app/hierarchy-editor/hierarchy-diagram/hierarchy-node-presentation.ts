@@ -4,14 +4,14 @@ const BASE_WIDTH = 150;
 const BASE_HEIGHT = 40;
 
 export class HierarchyNodePresentation {
-  private static idCounter: number = 0;
-  private static _yOffset: number = 0;
+  private static idCounter = 0;
+  private static _yOffset = 0;
 
-  public transform: string = '';
-  private _width: number = 0;
-  private _height: number = 0;
-  private _textX: number = 0;
-  private _textY: number = 0;
+  public transform = '';
+  private _width = 0;
+  private _height = 0;
+  private _textX = 0;
+  private _textY = 0;
   public title: string;
   private _id: string;
 
