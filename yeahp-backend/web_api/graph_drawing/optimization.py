@@ -154,7 +154,7 @@ class Problem:
 
             # TODO: fix this equation which is hardcoded for 2 child dependencies
             if parent_coord is not None:
-                matrix[row, parent_coord] = 2
+                matrix[row, parent_coord] = len(successors)
 
             for node in successors:
                 coord = self._coord_map[node]
