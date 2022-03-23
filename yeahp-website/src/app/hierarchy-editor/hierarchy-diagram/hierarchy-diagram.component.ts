@@ -39,7 +39,7 @@ export class HierarchyDiagramComponent implements OnInit {
         const yCoordMap: Map<string, number> = new Map();
         const depthMap: Map<string, number> = new Map();
 
-        let depth: number = 0;
+        let depth = 0;
         layout.class_by_depth.forEach((depthClass: string[]) => {
           depthClass.forEach((node: string) => {
             depthMap.set(node, depth);
